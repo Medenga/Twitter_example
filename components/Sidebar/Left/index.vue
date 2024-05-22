@@ -3,7 +3,7 @@
         <div class="p-2 my-2 hover:bg-red-50 over:rounded-full w-min dark:hover:bg-white/20" :class="transition">
             <nuxt-link to="/">
                 <div class="w-8 h-8">
-                    <LogosTwitter />
+                    <LogoTwitter />
                 </div>
             </nuxt-link>
         </div>
@@ -72,12 +72,27 @@
                     More
                 </template>
             </SidebarLeftTab> 
+            <div class="hidden xl:block">
+                <UIButton liquid size="lg">
+                    <span class="font-bold">
+                        Tweet
+                    </span>
+                </UIButton>
+            </div>
+
+            <div class="block xl:hidden">
+                <UIButton>
+                    <div class="w-6 h-6 font-bold">
+                        <PencilIcon />
+                    </div>
+                </UIButton>
+            </div>
         </div>
     </div>
 </template>
 <script setup>
 import { HomeIcon } from "@heroicons/vue/solid"
-import { HashtagIcon , BellIcon , InboxIcon , BookmarkIcon , DocumentTextIcon , UserIcon , DotsCircleHorizontalIcon } from "@heroicons/vue/outline"
+import { HashtagIcon , BellIcon , InboxIcon , BookmarkIcon , DocumentTextIcon , UserIcon , DotsCircleHorizontalIcon, PencilIcon } from "@heroicons/vue/outline"
 
 const { defaultTransition } = useTailwindConfig()
 </script>

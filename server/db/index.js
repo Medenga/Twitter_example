@@ -1,7 +1,7 @@
-import { prisma } from "."
+import Prisma from "@prisma/client"
 
-export const createRefreshToken = (refreshToken) => {
-    return prisma.refreshToken.create({
-        data: refreshToken
-    })
-}
+const { PrismaClient } = Prisma
+
+const prisma = new PrismaClient()
+
+export { prisma } 
